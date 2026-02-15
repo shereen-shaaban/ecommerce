@@ -18,12 +18,12 @@ request.onload=()=>{
                   <div class="parent">
                  <p>description:${element.description}</p>
                  <p>price:<span>${element.price}</span></p></div>
-                <i class="fa-solid fa-heart" id="icon"></i>
+                <i class="fa-solid fa-heart" class="icon"></i>
                </div>
                  </div>
                 
                 `
-                     let icon=document.querySelector("#icon")
+                     let icon=document.querySelectorAll(".icon")
                        
                          icon.addEventListener("click",()=>{
                         icon.classList.toggle("check")
@@ -128,5 +128,6 @@ function searchproducts(productname){
     request.open("Get",`https://dummyjson.com/products/search?q=${productname}`,true);
     request.send();
 };
+
 
 
