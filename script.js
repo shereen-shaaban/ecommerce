@@ -65,13 +65,13 @@ function getCategory(category){
                  <h3>title:${element.title}</h3>
                  <p>description:${element.description}</p>
                  <p>price:<span>${element.price}</span></p>
-                <i class="fa-regular fa-heart" id="icon" ></i>
+                <i class="fa-regular fa-heart" class="icon" ></i>
         
                </div>
                  </div>
                  
                     `
-                    let icon=document.querySelector("#icon")
+                    let icon=document.querySelectorall(".icon")
                   icon.addEventListener("click",()=>{
                           icon.classList.toggle("check")
                        })
@@ -128,4 +128,5 @@ function searchproducts(productname){
     request.open("Get",`https://dummyjson.com/products/search?q=${productname}`,true);
     request.send();
 };
+
 
